@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Custom Scrollbar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, darkgray);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, grey);
+}
+
+.container {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.container h1 {
+  color: peachpuff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.container p {
+  font-size: 20px;
+}
+
+.row .col-md-6 h3 {
+  color: peachpuff;
+  font-size: 35px;
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+div input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container div input,
+textarea {
+  -webkit-box-shadow: inset 7px 7px 13px -1px rgba(50, 50, 50, 0.29);
+  -moz-box-shadow: inset 7px 7px 13px -1px rgba(50, 50, 50, 0.29);
+  box-shadow: inset 7px 7px 13px -1px rgba(50, 50, 50, 0.29);
+}
+
+p.text-secondary {
+  font-size: 20px;
+}
+
+div.container button {
+  transition: all 300ms ease-in-out;
+}
+
+div.container button:hover {
+  box-shadow: 5px 7px 10px -5px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 5px 7px 10px -5px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 5px 7px 10px -5px rgba(0, 0, 0, 0.61);
+  transform: scale(1.1);
+}

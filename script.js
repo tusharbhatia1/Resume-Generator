@@ -26,6 +26,20 @@ function addNewAQ(){
     AQOb.insertBefore(newNode, aqAddBtnOb);
 }
 
+function addNewSKILL(){
+    let newNode = document.createElement('textarea');
+    newNode.classList.add('form-control');
+    newNode.classList.add('skillfield');
+    newNode.classList.add('mt-2');
+    newNode.setAttribute("rows", 1);
+    newNode.setAttribute("placeholder", "Enlist your skills");
+
+    let SKILLSOb = document.getElementById("SKILLS");
+    let SKILLSAddBtnOb = document.getElementById("skillsAddbBtn");
+
+    SKILLSOb.insertBefore(newNode, SKILLSAddBtnOb);
+}
+
 function addNewCER(){
     let newNode = document.createElement('textarea');
     newNode.classList.add('form-control');

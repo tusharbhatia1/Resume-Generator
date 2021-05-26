@@ -1,3 +1,17 @@
+function addNewSKILL(){
+    let newNode = document.createElement('textarea');
+    newNode.classList.add('form-control');
+    newNode.classList.add('skillfield');
+    newNode.classList.add('mt-2');
+    newNode.setAttribute("rows", 1);
+    newNode.setAttribute("placeholder", "Enlist your skills");
+
+    let SKILLSOb = document.getElementById("SKILLS");
+    let SKILLSAddBtnOb = document.getElementById("skillsAddbBtn");
+
+    SKILLSOb.insertBefore(newNode, SKILLSAddBtnOb);
+}
+
 function addNewCF(){
 
     var fieldName = prompt("Field Name:");
@@ -16,28 +30,6 @@ function addNewCF(){
 
     let CSOb = document.getElementById("CF");
     let cusAddBtnOb = document.getElementById("cusAddbBtn");
-
-    CSOb.insertBefore(newNode, cusAddBtnOb);
-}
-
-function addNewCF2(){
-
-    var fieldName = prompt("Field Name:");
-    document.getElementById("customField2").innerHTML = fieldName;
-
-    const button = document.getElementById("custom2");
-    button.disabled = true;
-    // button.disabled = false;
-
-    let newNode = document.createElement('textarea');
-    newNode.classList.add('form-control');
-    newNode.classList.add('cusfield2');
-    newNode.classList.add('mt-2');
-    newNode.setAttribute("rows", 3);
-    newNode.setAttribute("placeholder", "Enter Your Details");
-
-    let CSOb = document.getElementById("CF2");
-    let cusAddBtnOb = document.getElementById("cusAddbBtn2");
 
     CSOb.insertBefore(newNode, cusAddBtnOb);
 }
@@ -70,20 +62,6 @@ function addNewAQ(){
     AQOb.insertBefore(newNode, aqAddBtnOb);
 }
 
-function addNewSKILL(){
-    let newNode = document.createElement('textarea');
-    newNode.classList.add('form-control');
-    newNode.classList.add('skillfield');
-    newNode.classList.add('mt-2');
-    newNode.setAttribute("rows", 1);
-    newNode.setAttribute("placeholder", "Enlist your skills");
-
-    let SKILLSOb = document.getElementById("SKILLS");
-    let SKILLSAddBtnOb = document.getElementById("skillsAddbBtn");
-
-    SKILLSOb.insertBefore(newNode, SKILLSAddBtnOb);
-}
-
 function addNewCER(){
     let newNode = document.createElement('textarea');
     newNode.classList.add('form-control');
@@ -96,4 +74,26 @@ function addNewCER(){
     let cerAddBtnOb = document.getElementById("cerAddbBtn");
 
     CEROb.insertBefore(newNode, cerAddBtnOb);
+}
+
+function addNewCF2(){
+
+    var fieldName = prompt("Field Name:");
+    document.getElementById("customField2").innerHTML = fieldName;
+
+    const button = document.getElementById("custom2");
+    button.disabled = true;
+    // button.disabled = false;
+
+    let newNode = document.createElement('textarea');
+    newNode.classList.add('form-control');
+    newNode.classList.add('cusfield2');
+    newNode.classList.add('mt-2');
+    newNode.setAttribute("rows", 3);
+    newNode.setAttribute("placeholder", "Enter Your Details");
+
+    let CSOb = document.getElementById("CF2");
+    let cusAddBtnOb = document.getElementById("cusAddbBtn2");
+
+    CSOb.insertBefore(newNode, cusAddBtnOb);
 }

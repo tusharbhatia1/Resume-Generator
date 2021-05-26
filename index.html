@@ -12,121 +12,210 @@
 
     <title>Resume Generator</title>
 </head>
-<body class="bg-img">
-    <div class="container">
-        <h1 class="text-center my-3">Resume Generator</h1>
-        <p class="text-center">Enter your details and get your resume</p><br>
+<body>
+        <section class="bg-img">
+            <div class="container" id="cv-form">
+                <h1 class="text-center my-3">Resume Generator</h1>
+                <p class="text-center">Enter your details and get your resume</p><br>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <h3>Personal Information</h3>
+
+                        <div class="form-group mt-2">
+                            <label for="nameField">Your Name</label>
+                            <input type="text" id="nameField" class="form-control" placeholder="Enter Your Name">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="contactField">Your Contact</label>
+                            <input type="number" id="contactField" class="form-control" placeholder="Enter Your Phone Number">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="emailField">Your Email</label>
+                            <input type="email" id="emailField" class="form-control" placeholder="Enter Your Email Address">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="addressField">Your Address</label>
+                            <textarea id="addressField" class="form-control" placeholder="Enter Your Address" rows="5"></textarea>
+                        </div>
+
+                        <p class="text-secondary mt-3">Important Links</p>
+
+                        <div class="form-group mt-3">
+                            <label for="linkedField">LinkedIn</label>
+                            <input type="text" id="linkedField" class="form-control" placeholder="Provide Your ID Link">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="gitField">Github</label>
+                            <input type="text" id="gitField" class="form-control" placeholder="Provide Your ID Link">
+                        </div>
+
+                        <div class="form-group mt-3" id="SKILLS">
+                            <label for="skillsField">Skills</label>
+                            <textarea class="form-control skillfield" placeholder="Enlist Your Skills" rows="1"></textarea>
+
+                            <div class="container text-center mt-2" id="skillsAddbBtn">
+                                <button class="btn btn-primary btn-sm" onclick="addNewSKILL()">ADD</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3" id="CF">
+                            <label id="customField"></label>
+                            <div class="container text-center mt-2" id="cusAddbBtn">
+                                <button class="btn btn-primary btn-sm mb-3" id="custom" onclick="addNewCF()">ADD CUSTOM FIELD</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>Other Details</h3>
+
+                        <div class="form-group mt-2">
+                            <label for="summaryField">Summary</label>
+                            <textarea class="form-control summary" placeholder="Describe Yourself" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group mt-3" id="WE">
+                            <label for="workField">Work Experience</label>
+                            <textarea class="form-control wefield" placeholder="Enter Your Work Experiences" rows="3"></textarea>
+
+                            <div class="container text-center mt-2" id="weAddbBtn">
+                                <button class="btn btn-primary btn-sm" onclick="addNewWE()">ADD</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3" id="AQ">
+                            <label for="academicField">Academic Qualification</label>
+                            <textarea class="form-control aqfield" placeholder="Enter Your Educational Qualification" rows="3"></textarea>
+
+                            <div class="container text-center mt-2" id="aqAddbBtn">
+                                <button class="btn btn-primary btn-sm" onclick="addNewAQ()">ADD</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3" id="CER">
+                            <label for="certificateField">Certifications</label>
+                            <textarea class="form-control cerfield" placeholder="Enter Your Certifications" rows="2"></textarea>
+
+                            <div class="container text-center mt-2" id="cerAddbBtn">
+                                <button class="btn btn-primary btn-sm" onclick="addNewCER()">ADD</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="CF2">
+                            <label id="customField2"></label>
+                            <div class="container text-center mt-2" id="cusAddbBtn2">
+                                <button class="btn btn-primary btn-sm mb-3" id="custom2" onclick="addNewCF2()">ADD CUSTOM FIELD</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <div class="container text-center mt-3">
+                <button class="bnt btn-primary btn-lg mb-3">Generate Resume</button>
+            </div>    
+        </div>
+        </section>
+
+    <!-- CV Template -->
+
+    <div class="container" id="cv-template">
 
         <div class="row">
 
-            <div class="col-md-6">
-
-                <h3>Personal Information</h3>
-
-                <div class="form-group mt-2">
-                    <label for="nameField">Your Name</label>
-                    <input type="text" id="nameField" class="form-control" placeholder="Enter Your Name">
+            <div class="col-md-4 text-center py-5 background">
+                <img src="default profile.png" alt="Profile" class="image-fluid my-image">
+                
+                <div class="container">
+                    <p>Tushar Bhatia</p>
+                    <p>+919758050848</p>
+                    <p>tusharbhatia655@gmail.com</p>
+                    <p>Ramesh Nagar, NBD Road<br>Kotdwara, Uttarakhand<br>PIN: 246149</p>
+                    <hr>
+                    <p><a href="#">https://www.linkedin.com</a></p>
+                    <p><a href="#">https://www.github.com</a></p>
+                    <hr>
+                    <h4>SKILLS:</h4>
+                    <p>C++</p>
+                    <p>C</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>Bootstrap</p>
                 </div>
-
-                <div class="form-group mt-3">
-                    <label for="contactField">Your Contact</label>
-                    <input type="number" id="contactField" class="form-control" placeholder="Enter Your Phone Number">
-                </div>
-
-                <div class="form-group mt-3">
-                    <label for="emailField">Your Email</label>
-                    <input type="email" id="emailField" class="form-control" placeholder="Enter Your Email Address">
-                </div>
-
-                <div class="form-group mt-3">
-                    <label for="addressField">Your Address</label>
-                    <textarea id="addressField" class="form-control" placeholder="Enter Your Address" rows="5"></textarea>
-                </div>
-
-                <p class="text-secondary mt-3">Important Links</p>
-
-                <div class="form-group mt-3">
-                    <label for="fbField">Facebook</label>
-                    <input type="text" id="fbField" class="form-control" placeholder="Provide Your ID Link">
-                </div>
-                <div class="form-group mt-3">
-                    <label for="linkedField">LinkedIn</label>
-                    <input type="text" id="linkedField" class="form-control" placeholder="Provide Your ID Link">
-                </div>
-                <div class="form-group mt-3">
-                    <label for="gitField">Github</label>
-                    <input type="text" id="gitField" class="form-control" placeholder="Provide Your ID Link">
-                </div>
-
-                <div class="form-group mt-3" id="CF">
-                    <label id="customField"></label>
-                    <div class="container text-center mt-2" id="cusAddbBtn">
-                        <button class="btn btn-primary btn-sm mb-3" id="custom" onclick="addNewCF()">ADD CUSTOM FIELD</button>
-                    </div>
-                </div>
-
-                <div class="form-group" id="CF2">
-                    <label id="customField2"></label>
-                    <div class="container text-center mt-2" id="cusAddbBtn2">
-                        <button class="btn btn-primary btn-sm mb-3" id="custom2" onclick="addNewCF2()">ADD CUSTOM FIELD</button>
-                    </div>
-                </div>
-
             </div>
 
-            <div class="col-md-6">
-                <h3>Other Details</h3>
+            <div class="col-md-8 py-5">
+                <h1 class="text-center" style="font-weight: 800;">Tushar Bhatia</h1>
 
-                <div class="form-group mt-2">
-                    <label for="summaryField">Summary</label>
-                    <textarea class="form-control summary" placeholder="Describe Yourself" rows="5"></textarea>
-                </div>
-
-                <div class="form-group mt-3" id="WE">
-                    <label for="workField">Work Experience</label>
-                    <textarea class="form-control wefield" placeholder="Enter Your Work Experiences" rows="3"></textarea>
-
-                    <div class="container text-center mt-2" id="weAddbBtn">
-                        <button class="btn btn-primary btn-sm" onclick="addNewWE()">ADD</button>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Summary</h3>
+                    </div>
+                    <div class="card-body" style="color: black;">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam quia earum consequuntur, ab iusto dolorem molestias voluptatum ducimus voluptas corrupti id et autem voluptatibus sed eveniet provident totam architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi aliquid sunt sit, odio magni necessitatibus accusantium illo reiciendis assumenda at officia ea non error dolor, placeat corporis voluptatum voluptates!</p>
                     </div>
                 </div>
 
-                <div class="form-group mt-3" id="AQ">
-                    <label for="academicField">Academic Qualification</label>
-                    <textarea class="form-control aqfield" placeholder="Enter Your Educational Qualification" rows="3"></textarea>
-
-                    <div class="container text-center mt-2" id="aqAddbBtn">
-                        <button class="btn btn-primary btn-sm" onclick="addNewAQ()">ADD</button>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body" style="color: black;">
+                        <ul>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="form-group mt-3" id="SKILLS">
-                    <label for="skillsField">Skills</label>
-                    <textarea class="form-control skillfield" placeholder="Enlist Your Skills" rows="1"></textarea>
-
-                    <div class="container text-center mt-2" id="skillsAddbBtn">
-                        <button class="btn btn-primary btn-sm" onclick="addNewSKILL()">ADD</button>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body" style="color: black;">
+                        <ul>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="form-group mt-3" id="CER">
-                    <label for="certificateField">Certifications</label>
-                    <textarea class="form-control cerfield" placeholder="Enter Your Certifications" rows="2"></textarea>
-
-                    <div class="container text-center mt-2" id="cerAddbBtn">
-                        <button class="btn btn-primary btn-sm" onclick="addNewCER()">ADD</button>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Certifications</h3>
                     </div>
+                    <div class="card-body" style="color: black;">
+                        <ul>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button class="btn btn-primary btn-lg" style="font-size: 16px;">Print</button>
                 </div>
 
             </div>
 
         </div>
 
-        <div class="container text-center mt-3">
-            <button class="bnt btn-primary btn-lg mb-3">Generate Resume</button>
-        </div>    
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="script.js"></script>

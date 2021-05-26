@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+section.bg-img {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,4 +77,16 @@ div.container button:hover {
   -webkit-box-shadow: 5px 7px 10px -5px rgba(0, 0, 0, 0.61);
   -moz-box-shadow: 5px 7px 10px -5px rgba(0, 0, 0, 0.61);
   transform: scale(1.1);
+}
+
+/* #cv-form {
+  display: none;
+} */
+
+.my-image {
+  width: 200px;
+}
+
+.background {
+  background-color: mediumturquoise;
 }

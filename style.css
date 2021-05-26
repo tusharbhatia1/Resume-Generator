@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-section.bg-img {
+.bg-img {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  scroll-behavior: smooth;
+  margin-top: -16px;
 }
 
 /*Custom Scrollbar*/
@@ -79,9 +79,9 @@ div.container button:hover {
   transform: scale(1.1);
 }
 
-/* #cv-form {
+#cv-template {
   display: none;
-} */
+}
 
 .my-image {
   width: 200px;

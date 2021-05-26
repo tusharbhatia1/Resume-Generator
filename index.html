@@ -13,7 +13,10 @@
     <title>Resume Generator</title>
 </head>
 <body>
-        <section class="bg-img">
+
+    <!-- CV Form -->
+
+        <header class="bg-img">
             <div class="container" id="cv-form">
                 <h1 class="text-center my-3">Resume Generator</h1>
                 <p class="text-center">Enter your details and get your resume</p><br>
@@ -78,7 +81,7 @@
 
                         <div class="form-group mt-2">
                             <label for="summaryField">Summary</label>
-                            <textarea class="form-control summary" placeholder="Describe Yourself" rows="5"></textarea>
+                            <textarea class="form-control summary" id="summaryfield" placeholder="Describe Yourself" rows="5"></textarea>
                         </div>
 
                         <div class="form-group mt-3" id="WE">
@@ -120,10 +123,10 @@
                 </div>
 
             <div class="container text-center mt-3">
-                <button class="bnt btn-primary btn-lg mb-3">Generate Resume</button>
+                <button class="bnt btn-primary btn-lg mb-3" onclick="generateResume()">Generate Resume</button>
             </div>    
         </div>
-        </section>
+        </header>
 
     <!-- CV Template -->
 
@@ -134,34 +137,36 @@
             <div class="col-md-4 text-center py-5 background">
                 <img src="default profile.png" alt="Profile" class="image-fluid my-image">
                 
-                <div class="container">
-                    <p>Tushar Bhatia</p>
-                    <p>+919758050848</p>
-                    <p>tusharbhatia655@gmail.com</p>
-                    <p>Ramesh Nagar, NBD Road<br>Kotdwara, Uttarakhand<br>PIN: 246149</p>
+                <div class="container mt-3">
+                    <h4 class="text-center text-secondary" style="font-weight:500;">Personal Details</h4>
+                    <p id="nameT">Your Name</p>
+                    <p id="contactT">+91xxxxxxxxxx</p>
+                    <p id="emailT">abc@example.com</p>
+                    <p id="addressT">ABC, XYZ<br>City, State, District, India<br>PIN: XXXXXX</p>
                     <hr>
-                    <p><a href="#">https://www.linkedin.com</a></p>
-                    <p><a href="#">https://www.github.com</a></p>
+                    <p><a id="linkedT" href="#">https://www.linkedin.com</a></p>
+                    <p><a id="gitT" href="#">https://www.github.com</a></p>
                     <hr>
                     <h4>SKILLS:</h4>
-                    <p>C++</p>
-                    <p>C</p>
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>Bootstrap</p>
+                    <p>X</p>
+                    <p>X</p>
+                    <p>X</p>
+                    <p>X</p>
+                    <p>X</p>
+                    <p>X</p>
                 </div>
             </div>
 
             <div class="col-md-8 py-5">
-                <h1 class="text-center" style="font-weight: 800;">Tushar Bhatia</h1>
+                <h2 class="text-center text-secondary" style="font-weight:500;">Other Details</h2>
+                <h4 class="text-center" id="nameT2" style="color: black;">YOUR NAME</h4>
 
                 <div class="card mt-4">
                     <div class="card-header background">
                         <h3>Summary</h3>
                     </div>
                     <div class="card-body" style="color: black;">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam quia earum consequuntur, ab iusto dolorem molestias voluptatum ducimus voluptas corrupti id et autem voluptatibus sed eveniet provident totam architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi aliquid sunt sit, odio magni necessitatibus accusantium illo reiciendis assumenda at officia ea non error dolor, placeat corporis voluptatum voluptates!</p>
+                        <p id="summaryT">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam quia earum consequuntur, ab iusto dolorem molestias voluptatum ducimus voluptas corrupti id et autem voluptatibus sed eveniet provident totam architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi aliquid sunt sit, odio magni necessitatibus accusantium illo reiciendis assumenda at officia ea non error dolor, placeat corporis voluptatum voluptates!</p>
                     </div>
                 </div>
 
@@ -170,7 +175,7 @@
                         <h3>Work Experience</h3>
                     </div>
                     <div class="card-body" style="color: black;">
-                        <ul>
+                        <ul id="weT">
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
@@ -184,7 +189,7 @@
                         <h3>Academic Qualification</h3>
                     </div>
                     <div class="card-body" style="color: black;">
-                        <ul>
+                        <ul id="aqT">
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
@@ -198,7 +203,7 @@
                         <h3>Certifications</h3>
                     </div>
                     <div class="card-body" style="color: black;">
-                        <ul>
+                        <ul id="cerT">
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quos!</li>
@@ -208,7 +213,7 @@
                 </div>
 
                 <div class="container mt-3 text-center">
-                    <button class="btn btn-primary btn-lg" style="font-size: 16px;">Print</button>
+                    <button class="btn btn-primary btn-lg" style="font-size: 16px;" onclick="printResume()">Print Resume</button>
                 </div>
 
             </div>

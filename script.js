@@ -97,3 +97,74 @@ function addNewCF2(){
 
     CSOb.insertBefore(newNode, cusAddBtnOb);
 }
+
+// generating resume
+
+function generateResume(){
+
+    // Name Field
+    let nameField = document.getElementById('nameField').value;
+    let nameT = document.getElementById('nameT');
+    let nameT2 = document.getElementById('nameT2');
+    nameT.innerHTML = nameField;
+    nameT2.innerHTML = nameField;
+
+    // Contact Field
+    document.getElementById('contactT').innerHTML = document.getElementById('contactField').value;
+
+     // Email Field
+     document.getElementById('emailT').innerHTML = document.getElementById('emailField').value;
+
+      // Address Field
+    document.getElementById('addressT').innerHTML = document.getElementById('addressField').value;
+
+     // Important Links Field
+     document.getElementById('linkedT').innerHTML = document.getElementById('linkedField').value;
+     document.getElementById('gitT').innerHTML = document.getElementById('gitField').value;
+
+     // Summary Field
+    document.getElementById('summaryT').innerHTML = document.getElementById('summaryfield').value;
+
+    // Work Experience Field
+    let wes = document.getElementsByClassName('wefield');
+    let strwe = "";
+
+    for(let e of wes)
+    {
+        strwe = strwe + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById('weT').innerHTML = strwe;
+
+    // Academic Qualifications Field
+    let aqs = document.getElementsByClassName('aqfield');
+    let straq = "";
+
+    for(let e of aqs)
+    {
+        straq = straq + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById('aqT').innerHTML = straq;
+
+    // Certifications Field
+    let cers = document.getElementsByClassName('cerfield');
+    let strcer = "";
+
+    for(let e of cers)
+    {
+        strcer = strcer + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById('cerT').innerHTML = strcer;
+
+    // Toggle Form and template
+    document.getElementById('cv-form').style.display = 'none';
+    document.getElementById('cv-template').style.display = 'block';
+}
+
+// Printing resume
+
+function printResume(){
+    window.print();
+}

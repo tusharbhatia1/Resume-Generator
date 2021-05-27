@@ -122,6 +122,17 @@ function generateResume(){
      document.getElementById('linkedT').innerHTML = document.getElementById('linkedField').value;
      document.getElementById('gitT').innerHTML = document.getElementById('gitField').value;
 
+      // Skills Field
+    let skillss = document.getElementsByClassName('skillfield');
+    let strskills = "";
+
+    for(let e of skillss)
+    {
+        strskills = strskills + `<p> ${e.value} </p>`;
+    }
+
+    document.getElementById('skillsT').innerHTML = strskills;
+
      // Summary Field
     document.getElementById('summaryT').innerHTML = document.getElementById('summaryfield').value;
 

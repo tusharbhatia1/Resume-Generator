@@ -84,7 +84,9 @@ div.container button:hover {
 }
 
 .my-image {
-  width: 200px;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
 }
 
 .background {

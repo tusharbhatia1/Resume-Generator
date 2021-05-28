@@ -169,23 +169,35 @@ function generateResume(){
 
     document.getElementById('cerT').innerHTML = strcer;
 
+    // Image Field
+    let file = document.getElementById("imgfield").files[0];
+
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file);
+
+    reader.onloadend = function (){
+        document.getElementById("imgT").src = reader.result;
+    }
+
     // Toggle Form and template
     document.getElementById('cv-form').style.display = 'none';
     document.getElementById('cv-template').style.display = 'block';
+
 }
 
 // Download resume
 
 window.onload = function(){
     document.getElementById("download").addEventListener("click",()=>{
-        const template = this.document.getElementById("cv-template");
+        const template = this.document.getElementById("download-template");
 
         var opt = {
-            margin:       1,
+            margin:       0.5,
             filename:     'resumeGenerator.pdf',
-            // image:        { type: 'jpeg', quality: 0.98 },
-            // html2canvas:  { scale: 1.5 },
-            // jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            image:        { type: 'jpeg', quality: 1 },
+            // html2canvas:  { scale: 1 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
           };
 
         html2pdf().from(template).set(opt).save();

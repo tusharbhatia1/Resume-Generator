@@ -174,8 +174,20 @@ function generateResume(){
     document.getElementById('cv-template').style.display = 'block';
 }
 
-// Printing resume
+// Download resume
 
-function printResume(){
-    window.print();
+window.onload = function(){
+    document.getElementById("download").addEventListener("click",()=>{
+        const template = this.document.getElementById("cv-template");
+
+        var opt = {
+            margin:       1,
+            filename:     'resumeGenerator.pdf',
+            // image:        { type: 'jpeg', quality: 0.98 },
+            // html2canvas:  { scale: 1.5 },
+            // jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+
+        html2pdf().from(template).set(opt).save();
+    })
 }

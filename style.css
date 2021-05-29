@@ -92,3 +92,19 @@ div.container button:hover {
 .background {
   background-color: mediumturquoise;
 }
+
+#customT1 {
+  display: none;
+}
+
+#customT1.active {
+  display: block;
+}
+
+#customT2 {
+  display: none;
+}
+
+#customT2.active {
+  display: block;
+}

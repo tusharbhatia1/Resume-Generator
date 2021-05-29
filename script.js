@@ -32,6 +32,9 @@ function addNewCF(){
     let cusAddBtnOb = document.getElementById("cusAddbBtn");
 
     CSOb.insertBefore(newNode, cusAddBtnOb);
+
+    // Adding custom section in template
+    document.getElementById("customT1").classList.add('active');
 }
 
 function addNewWE(){
@@ -96,6 +99,9 @@ function addNewCF2(){
     let cusAddBtnOb = document.getElementById("cusAddbBtn2");
 
     CSOb.insertBefore(newNode, cusAddBtnOb);
+
+    // Adding custom section in template
+    document.getElementById("customT2").classList.add('active');
 }
 
 // generating resume
@@ -168,6 +174,10 @@ function generateResume(){
     }
 
     document.getElementById('cerT').innerHTML = strcer;
+
+    // document.getElementById('cusT1').innerHTML = document.getElementsByClassName('cusfield').value;
+
+    // document.getElementById('cusT2').innerHTML = document.getElementsByClassName('cusfield2').value;
 
     // Image Field
     let file = document.getElementById("imgfield").files[0];

@@ -129,8 +129,8 @@ function generateResume(){
     document.getElementById('addressT').innerHTML = document.getElementById('addressField').value;
 
      // Important Links Field
-     document.getElementById('linkedT').innerHTML = document.getElementById('linkedField').value;
-     document.getElementById('gitT').innerHTML = document.getElementById('gitField').value;
+     document.getElementById('linkedT').href = document.getElementById('linkedField').value;
+     document.getElementById('gitT').href = document.getElementById('gitField').value;
 
       // Skills Field
     let skillss = document.getElementsByClassName('skillfield');

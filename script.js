@@ -16,6 +16,7 @@ function addNewCF(){
 
     var fieldName = prompt("Field Name:");
     document.getElementById("customField").innerHTML = fieldName;
+    document.getElementById("custitle1").innerHTML = fieldName;
 
     const button = document.getElementById("custom");
     button.disabled = true;
@@ -25,6 +26,7 @@ function addNewCF(){
     newNode.classList.add('form-control');
     newNode.classList.add('cusfield');
     newNode.classList.add('mt-2');
+    newNode.setAttribute('id','cus1Details');
     newNode.setAttribute("rows", 3);
     newNode.setAttribute("placeholder", "Enter Your Details");
 
@@ -81,8 +83,9 @@ function addNewCER(){
 
 function addNewCF2(){
 
-    var fieldName = prompt("Field Name:");
-    document.getElementById("customField2").innerHTML = fieldName;
+    var fieldName2 = prompt("Field Name:");
+    document.getElementById("customField2").innerHTML = fieldName2;
+    document.getElementById("custitle2").innerHTML = fieldName2;
 
     const button = document.getElementById("custom2");
     button.disabled = true;
@@ -92,6 +95,7 @@ function addNewCF2(){
     newNode.classList.add('form-control');
     newNode.classList.add('cusfield2');
     newNode.classList.add('mt-2');
+    newNode.setAttribute('id','cus2Details');
     newNode.setAttribute("rows", 3);
     newNode.setAttribute("placeholder", "Enter Your Details");
 
@@ -139,6 +143,12 @@ function generateResume(){
 
     document.getElementById('skillsT').innerHTML = strskills;
 
+    //  Custom Field 1
+    document.getElementById('cusT1').innerHTML = document.getElementById('cus1Details').value;
+
+    //  Custom Field 2
+    document.getElementById('cusT2').innerHTML = document.getElementById('cus2Details').value;
+
      // Summary Field
     document.getElementById('summaryT').innerHTML = document.getElementById('summaryfield').value;
 
@@ -174,10 +184,6 @@ function generateResume(){
     }
 
     document.getElementById('cerT').innerHTML = strcer;
-
-    // document.getElementById('cusT1').innerHTML = document.getElementsByClassName('cusfield').value;
-
-    // document.getElementById('cusT2').innerHTML = document.getElementsByClassName('cusfield2').value;
 
     // Image Field
     let file = document.getElementById("imgfield").files[0];

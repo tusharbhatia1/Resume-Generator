@@ -16,7 +16,7 @@ function addNewCF(){
 
     var fieldName = prompt("Field Name:");
     document.getElementById("customField").innerHTML = fieldName;
-    document.getElementById("custitle1").innerHTML = fieldName;
+    // document.getElementById("custitle1").innerHTML = fieldName;
 
     const button = document.getElementById("custom");
     button.disabled = true;
@@ -85,7 +85,7 @@ function addNewCF2(){
 
     var fieldName2 = prompt("Field Name:");
     document.getElementById("customField2").innerHTML = fieldName2;
-    document.getElementById("custitle2").innerHTML = fieldName2;
+    // document.getElementById("custitle2").innerHTML = fieldName2;
 
     const button = document.getElementById("custom2");
     button.disabled = true;
@@ -144,10 +144,10 @@ function generateResume(){
     document.getElementById('skillsT').innerHTML = strskills;
 
     //  Custom Field 1
-    document.getElementById('cusT1').innerHTML = document.getElementById('cus1Details').value;
+    // document.getElementById('cusT1').innerHTML = document.getElementById('cus1Details').value;
 
     //  Custom Field 2
-    document.getElementById('cusT2').innerHTML = document.getElementById('cus2Details').value;
+    // document.getElementById('cusT2').innerHTML = document.getElementById('cus2Details').value;
 
      // Summary Field
     document.getElementById('summaryT').innerHTML = document.getElementById('summaryfield').value;
